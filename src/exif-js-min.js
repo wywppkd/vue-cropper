@@ -31,6 +31,7 @@ function getImageData(img) {
           fileReader.readAsArrayBuffer(blob);
         });
       } else {
+        // TODO: oss 图片跨域问题原因
         var http = new XMLHttpRequest();
         http.onload = function () {
           if (this.status == 200 || this.status === 0) {
